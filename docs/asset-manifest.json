@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.12d852b1.css",
-    "main.js": "/static/js/main.e18a4a67.js",
-    "static/media/pasal_bg.jpg": "/static/media/pasal_bg.85c86c597db428a123ae.jpg",
-    "static/media/HomePage.png": "/static/media/HomePage.286d28af617fd8c737f4.png",
-    "static/media/MYRIADPRO-BOLD.woff": "/static/media/MYRIADPRO-BOLD.1c6432261fa438517e63.woff",
-    "static/media/MYRIADPRO-REGULAR.woff": "/static/media/MYRIADPRO-REGULAR.d30b05461519da431d12.woff",
-    "static/media/Graph.jpg": "/static/media/Graph.8cf9be73c7bbbc1df850.jpg",
-    "static/media/Mytaxsoft.png": "/static/media/Mytaxsoft.aa67690099b96e8eb2f1.png",
-    "index.html": "/index.html",
-    "static/media/noise.svg": "/static/media/noise.46169fe3bf16f4e975f2d782397cb535.svg",
-    "main.12d852b1.css.map": "/static/css/main.12d852b1.css.map",
-    "main.e18a4a67.js.map": "/static/js/main.e18a4a67.js.map"
+    "main.css": "https://spiderpigzz.github.io/pasal21-website/static/css/main.12d852b1.css",
+    "main.js": "https://spiderpigzz.github.io/pasal21-website/static/js/main.e91bff0e.js",
+    "static/media/pasal_bg.jpg": "https://spiderpigzz.github.io/pasal21-website/static/media/pasal_bg.85c86c597db428a123ae.jpg",
+    "static/media/HomePage.png": "https://spiderpigzz.github.io/pasal21-website/static/media/HomePage.286d28af617fd8c737f4.png",
+    "static/media/MYRIADPRO-BOLD.woff": "https://spiderpigzz.github.io/pasal21-website/static/media/MYRIADPRO-BOLD.1c6432261fa438517e63.woff",
+    "static/media/MYRIADPRO-REGULAR.woff": "https://spiderpigzz.github.io/pasal21-website/static/media/MYRIADPRO-REGULAR.d30b05461519da431d12.woff",
+    "static/media/Graph.jpg": "https://spiderpigzz.github.io/pasal21-website/static/media/Graph.8cf9be73c7bbbc1df850.jpg",
+    "static/media/Mytaxsoft.png": "https://spiderpigzz.github.io/pasal21-website/static/media/Mytaxsoft.aa67690099b96e8eb2f1.png",
+    "index.html": "https://spiderpigzz.github.io/pasal21-website/index.html",
+    "static/media/noise.svg": "https://spiderpigzz.github.io/pasal21-website/static/media/noise.46169fe3bf16f4e975f2d782397cb535.svg",
+    "main.12d852b1.css.map": "https://spiderpigzz.github.io/pasal21-website/static/css/main.12d852b1.css.map",
+    "main.e91bff0e.js.map": "https://spiderpigzz.github.io/pasal21-website/static/js/main.e91bff0e.js.map"
   },
   "entrypoints": [
     "static/css/main.12d852b1.css",
-    "static/js/main.e18a4a67.js"
+    "static/js/main.e91bff0e.js"
   ]
 }
