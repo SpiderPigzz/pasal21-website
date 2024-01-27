@@ -5,6 +5,8 @@ import BACKGROUND_IMG from "assets/pasal_bg.jpg";
 
 import FooterCard from "components/FooterCard/FooterCard";
 import PriceTable from "components/PriceTable/PriceTable";
+import Footer from "components/FooterCard/Footer";
+import { HEADER_HEIGHT } from "utils/constants";
 
 const fontWeight = 800;
 const fontFamily = "Myriad Pro Bold";
@@ -35,7 +37,7 @@ const PricePage = () => {
           backgroundPosition: "center",
           display: "flex",
           width: "100%",
-          height: "30vh",
+          minHeight: "30vh",
         }}
       >
         <Box
@@ -49,6 +51,7 @@ const PricePage = () => {
             flexDirection: "column",
             gap: "1rem",
             backdropFilter: "blur(2px)",
+            paddingTop: HEADER_HEIGHT,
           }}
         >
           {/* <img src={EOS_RS_LOGO} height={"80px"} /> */}
@@ -77,34 +80,14 @@ const PricePage = () => {
         sx={{
           display: "flex",
           flexDirection: " column",
-          height: "50vh",
-          padding: "2rem",
-          gap: "3rem",
+          minHeight: "50vh",
+          maxWidth: "100vw",
         }}
       >
         <PriceTable />
       </Box>
 
-      <Box
-        sx={{
-          background: "linear-gradient(#032852,#021122 73.22%,#010810)",
-          height: "20vh",
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-        }}
-      >
-        <FooterCard
-          Text={"Jl. Pangeran Tubagus Angke"}
-          Icon={"LocationOnRounded"}
-        />
-        <FooterCard Text={"mytaxsoft@yahoo.com"} Icon={"EmailRounded"} />
-        <FooterCard Text={"0818845111"} Icon={"LocalPhoneRounded"} />
-        <FooterCard
-          Text={"© Copyright 2024 Pasal 21"}
-          Icon={"CopyrightRounded"}
-        />
-      </Box>
+      <Footer />
     </Box>
   );
 };

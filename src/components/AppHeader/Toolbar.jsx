@@ -1,18 +1,31 @@
-import { Button, Stack, Toolbar } from "@mui/material";
+import { Button, Stack, Toolbar, Drawer, Divider } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { getRoute } from "../../utils/routes";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useLocation, useNavigate } from "react-router-dom";
 import PASAL_LOGO from "assets/Mytaxsoft.png";
+import useScreenSize from "hooks/useScreenSize";
+import { useState } from "react";
+import DynamicIconMUI from "components/DynamicIconMUI";
 
 const fontWeight = 800;
 const fontFamily = "Myriad Pro Bold";
 
 const CustomToolbar = ({ isMapPage, handleDrawerOpen, open }) => {
+  const [openDrawer, setOpenDrawer] = useState(false);
   const Navigate = useNavigate();
   const location = useLocation();
   const currentPath = location.pathname;
+  const { isDesktopView } = useScreenSize();
+
+  const handleMenuOpen = () => {
+    setOpenDrawer(true);
+  };
+
+  const handleMenuClose = () => {
+    setOpenDrawer(false);
+  };
 
   function PasalIcon(props) {
     return (
@@ -23,41 +36,9 @@ const CustomToolbar = ({ isMapPage, handleDrawerOpen, open }) => {
       />
     );
   }
-
-  return (
-    <Toolbar>
-      {isMapPage ? (
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          onClick={handleDrawerOpen}
-          edge="start"
-          sx={{ mr: 2, ...(open && { display: "none" }) }}
-        >
-          <MenuIcon />
-        </IconButton>
-      ) : (
-        <></>
-      )}
-
-      <Button
-        onClick={() => {
-          Navigate(getRoute("home"));
-        }}
-      >
-        <PasalIcon size={54} />
-      </Button>
-      {/* <Typography
-        variant="h5"
-        color="white"
-        sx={{ flexGrow: 1, fontWeight: 800, letterSpacing: 3, ml: "1%" }}
-      >
-        EOS-RS
-      </Typography> */}
-      <Stack
-        sx={{ width: "100%", justifyContent: "end", height: "100%" }}
-        direction={"row"}
-      >
+  const MenuButtons = ({ currentPath, variant }) => {
+    return (
+      <>
         <Button
           onClick={() => {
             Navigate(getRoute("home"));
@@ -79,6 +60,7 @@ const CustomToolbar = ({ isMapPage, handleDrawerOpen, open }) => {
           </Typography>
         </Button>
 
+        {variant == "mobile" ? <Divider /> : <></>}
         <Button
           onClick={() => {
             Navigate(getRoute("price"));
@@ -97,8 +79,91 @@ const CustomToolbar = ({ isMapPage, handleDrawerOpen, open }) => {
             price
           </Typography>
         </Button>
-      </Stack>
-    </Toolbar>
+      </>
+    );
+  };
+
+  return (
+    <>
+      <Toolbar>
+        {isMapPage ? (
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: "none" }) }}
+          >
+            <MenuIcon />
+          </IconButton>
+        ) : (
+          <></>
+        )}
+
+        <Button
+          onClick={() => {
+            Navigate(getRoute("home"));
+          }}
+        >
+          <PasalIcon size={54} />
+        </Button>
+        {/* <Typography
+        variant="h5"
+        color="white"
+        sx={{ flexGrow: 1, fontWeight: 800, letterSpacing: 3, ml: "1%" }}
+      >
+        EOS-RS
+      </Typography> */}
+        <Stack
+          sx={{
+            width: "100%",
+            justifyContent: "end",
+            height: "100%",
+            alignItems: "center",
+          }}
+          direction={"row"}
+        >
+          {isDesktopView ? (
+            <MenuButtons currentPath={currentPath} />
+          ) : (
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleMenuOpen}
+              // edge="start"
+              sx={{ height: "fit-content" }}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
+        </Stack>
+      </Toolbar>
+      <Drawer anchor="right" open={openDrawer} onClose={handleMenuClose}>
+        <Stack
+          direction="row"
+          // justifyContent="space-between"
+          sx={{
+            padding: "1rem",
+            borderBottom: "1px solid #ccc",
+            backgroundColor: "#333",
+            color: "white",
+            alignItems: "center",
+
+            width: "40vw",
+          }}
+        >
+          <IconButton color="inherit" onClick={handleMenuClose}>
+            <DynamicIconMUI iconName={"Close"} />
+          </IconButton>
+          <Typography sx={{ fontWeight: 800 }} variant="h5">
+            Menu
+          </Typography>
+        </Stack>
+        <Stack sx={{ padding: 1 }}>
+          <MenuButtons currentPath={currentPath} variant={"mobile"} />
+        </Stack>
+      </Drawer>
+    </>
   );
 };
 

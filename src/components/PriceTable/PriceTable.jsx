@@ -46,7 +46,7 @@ const PriceTable = () => {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} style={{ overflow: "auto" }}>
       <Table>
         <TableHead>
           <StyledTableRow>

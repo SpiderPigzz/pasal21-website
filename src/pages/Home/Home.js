@@ -13,6 +13,7 @@ import ItemCard from "components/HomePage/ItemCard/ItemCard";
 import FeatureCard from "components/HomePage/FeatureCard/FeatureCard";
 import FooterCard from "components/FooterCard/FooterCard";
 import DownloadButton from "components/HomePage/DownloadButton/DowloadButton";
+import Footer from "components/FooterCard/Footer";
 
 const fontWeight = 800;
 const fontFamily = "Myriad Pro Bold";
@@ -300,26 +301,7 @@ const HomePage = () => {
         </Box>
       </Box>
 
-      <Box
-        sx={{
-          background: "linear-gradient(#032852,#021122 73.22%,#010810)",
-          height: "200px",
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-        }}
-      >
-        <FooterCard
-          Text={"Jl. Pangeran Tubagus Angke"}
-          Icon={"LocationOnRounded"}
-        />
-        <FooterCard Text={"mytaxsoft@yahoo.com"} Icon={"EmailRounded"} />
-        <FooterCard Text={"0818845111"} Icon={"LocalPhoneRounded"} />
-        <FooterCard
-          Text={"© Copyright 2024 Pasal 21"}
-          Icon={"CopyrightRounded"}
-        />
-      </Box>
+      <Footer />
     </Box>
   );
 };

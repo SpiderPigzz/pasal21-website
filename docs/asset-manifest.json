@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "https://spiderpigzz.github.io/pasal21-website/static/css/main.12d852b1.css",
-    "main.js": "https://spiderpigzz.github.io/pasal21-website/static/js/main.e91bff0e.js",
+    "main.js": "https://spiderpigzz.github.io/pasal21-website/static/js/main.273c4c7a.js",
+    "static/media/pph2024_Gross_Gratis.exe": "https://spiderpigzz.github.io/pasal21-website/static/media/pph2024_Gross_Gratis.405b2ca077bdd71eafbb.exe",
+    "static/media/pph2024_Netto_Gratis.exe": "https://spiderpigzz.github.io/pasal21-website/static/media/pph2024_Netto_Gratis.07b49f8f8e6afb89092c.exe",
     "static/media/pasal_bg.jpg": "https://spiderpigzz.github.io/pasal21-website/static/media/pasal_bg.85c86c597db428a123ae.jpg",
     "static/media/HomePage.png": "https://spiderpigzz.github.io/pasal21-website/static/media/HomePage.286d28af617fd8c737f4.png",
     "static/media/MYRIADPRO-BOLD.woff": "https://spiderpigzz.github.io/pasal21-website/static/media/MYRIADPRO-BOLD.1c6432261fa438517e63.woff",
@@ -11,10 +13,10 @@
     "index.html": "https://spiderpigzz.github.io/pasal21-website/index.html",
     "static/media/noise.svg": "https://spiderpigzz.github.io/pasal21-website/static/media/noise.46169fe3bf16f4e975f2d782397cb535.svg",
     "main.12d852b1.css.map": "https://spiderpigzz.github.io/pasal21-website/static/css/main.12d852b1.css.map",
-    "main.e91bff0e.js.map": "https://spiderpigzz.github.io/pasal21-website/static/js/main.e91bff0e.js.map"
+    "main.273c4c7a.js.map": "https://spiderpigzz.github.io/pasal21-website/static/js/main.273c4c7a.js.map"
   },
   "entrypoints": [
     "static/css/main.12d852b1.css",
-    "static/js/main.e91bff0e.js"
+    "static/js/main.273c4c7a.js"
   ]
 }

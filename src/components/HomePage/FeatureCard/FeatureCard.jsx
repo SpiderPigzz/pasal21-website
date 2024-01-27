@@ -22,14 +22,15 @@ const FeatureCard = ({ Title, Icon, Description }) => {
   // const [loading, setLoading] = useState(true);
 
   return (
-    <Grid item xs={12} md={6} sx={{ maxWidth: "100%" }}>
-      <ScaleUpOnHover>
+    <Grid item xs={12} md={6} sx={{ maxWidth: "100%", minHeight: "100%" }}>
+      <ScaleUpOnHover height={"100%"}>
         <Card
           sx={{
             display: "flex",
             flexDirection: "column",
             boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
-            height: "140px",
+            minHeight: "100%",
+
             // background: "rgba(255, 255, 255, 1)",
             borderRadius: "16px",
             // boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1)",
