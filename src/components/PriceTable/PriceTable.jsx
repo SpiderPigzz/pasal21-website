@@ -69,7 +69,17 @@ const PriceTable = () => {
         </TableHead>
         <TableBody>
           <StyledTableRow theme={classes.tableBody}>
-            <TableCell>11 s/d 35</TableCell>
+            <TableCell>1 s/d 5</TableCell>
+            <TableCell>Gratis</TableCell>
+            <TableCell>Gratis</TableCell>
+
+            <TableCell>N/A</TableCell>
+
+            <TableCell>Contact melalui mytaxsoft@yahoo.com</TableCell>
+          </StyledTableRow>
+
+          <StyledTableRow theme={classes.tableBody}>
+            <TableCell>6 s/d 35</TableCell>
             <TableCell>Rp. 5.000.000</TableCell>
             <TableCell>Rp. 7.000.000</TableCell>
 

@@ -9,9 +9,10 @@ import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrow
 import GRAPH_IMG from "assets/Graph.jpg";
 import HOMEPAGE_IMG from "assets/HomePage.png";
 
-import ItemCard from "components/ItemCard/ItemCard";
-import FeatureCard from "components/FeatureCard/FeatureCard";
+import ItemCard from "components/HomePage/ItemCard/ItemCard";
+import FeatureCard from "components/HomePage/FeatureCard/FeatureCard";
 import FooterCard from "components/FooterCard/FooterCard";
+import DownloadButton from "components/HomePage/DownloadButton/DowloadButton";
 
 const fontWeight = 800;
 const fontFamily = "Myriad Pro Bold";
@@ -92,7 +93,7 @@ const HomePage = () => {
           >
             Program Penghitung Pajak
           </Typography>
-          <Button
+          {/* <Button
             variant="contained"
             // type="primary"
 
@@ -105,7 +106,8 @@ const HomePage = () => {
             // href="https://earthobservatory.sg/research/centres-labs/eos-rs"
           >
             Learn More
-          </Button>
+          </Button> */}
+          <DownloadButton />
           <IconButton size="large" onClick={scrollToStart}>
             <KeyboardDoubleArrowDownIcon color="whitecolor" />
           </IconButton>

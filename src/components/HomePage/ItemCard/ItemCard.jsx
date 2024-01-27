@@ -1,6 +1,7 @@
 import React from "react";
-import { API, HEADER_HEIGHT } from "../../utils/constants";
+import { API, HEADER_HEIGHT } from "../../../utils/constants";
 import { useState, useEffect } from "react";
+
 import Noise from "assets/noise.svg";
 import {
   Card,
@@ -18,23 +19,24 @@ import ScaleUpOnHover from "utils/Animations/ScaleUpOnHover";
 import { formatDate, textToColorHex } from "utils/helper";
 import DynamicIconMUI from "components/DynamicIconMUI";
 
-const FeatureCard = ({ Title, Icon, Description }) => {
+const ItemCard = ({ Title, Icon, Description }) => {
   // const [loading, setLoading] = useState(true);
 
   return (
-    <Grid item xs={12} md={6} sx={{ maxWidth: "100%" }}>
+    <Grid item xs={12} md={3} sx={{ maxWidth: "100%" }}>
       <ScaleUpOnHover>
         <Card
           sx={{
+            maxWidth: "100%",
             display: "flex",
             flexDirection: "column",
             boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
-            height: "140px",
-            // background: "rgba(255, 255, 255, 1)",
+            background: "rgba(255, 255, 255, 1)",
             borderRadius: "16px",
+            height: "20rem",
             // boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1)",
-            backgroundColor: "transparent",
-            border: "1px solid rgba(180, 240, 255, 0.29)",
+            // backgroundColor: "transparent",
+            // border: "1px solid rgba(180, 240, 255, 0.29)",
             // boxShadow: "0",
           }}
         >
@@ -46,11 +48,7 @@ const FeatureCard = ({ Title, Icon, Description }) => {
               justifyContent: "space-between",
             }}
           >
-            <Stack
-              direction={"row"}
-              gap={4}
-              sx={{ alignItems: "center", height: "100%" }}
-            >
+            <Stack gap={4} sx={{ alignItems: "center" }}>
               <IconButton
                 sx={{
                   border: `2px solid #ffbd59`,
@@ -63,32 +61,33 @@ const FeatureCard = ({ Title, Icon, Description }) => {
               >
                 <DynamicIconMUI
                   sx={{ fontSize: 60 }}
-                  color="orangecolor"
+                  color={"orangecolor"}
                   iconName={Icon}
                 />
               </IconButton>
-              <Stack>
-                <Typography
-                  style={{ wordWrap: "break-word" }}
-                  variant="h5"
-                  color={"#ffbd59"}
-                >
-                  {Title}
-                </Typography>
 
-                <Typography
-                  sx={{
-                    display: "-webkit-box",
-                    overflow: "hidden",
-                    WebkitBoxOrient: "vertical",
-                    WebkitLineClamp: 3,
-                  }}
-                  variant="body1"
-                  color={"gray"}
-                >
-                  {Description}
-                </Typography>
-              </Stack>
+              <Typography
+                style={{ wordWrap: "break-word" }}
+                variant="h5"
+                color={"secondary"}
+                textAlign={"center"}
+              >
+                {Title}
+              </Typography>
+
+              <Typography
+                sx={{
+                  display: "-webkit-box",
+                  overflow: "hidden",
+                  WebkitBoxOrient: "vertical",
+                  WebkitLineClamp: 3,
+                }}
+                variant="body1"
+                color={"gray"}
+                textAlign={"center"}
+              >
+                {Description}
+              </Typography>
             </Stack>
           </CardContent>
         </Card>
@@ -97,4 +96,4 @@ const FeatureCard = ({ Title, Icon, Description }) => {
   );
 };
 
-export default FeatureCard;
+export default ItemCard;
